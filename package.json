@@ -1,0 +1,27 @@
+{
+  "name": "library-api",
+  "version": "1.0.0",
+  "description": "\"this is my api aplication create.\"",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "keywords": [
+    "node",
+    "api",
+    "express"
+  ],
+  "author": "Ranajit",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.3",
+    "joi": "^17.12.3",
+    "mongoose": "^8.2.3",
+    "url": "^0.11.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}
