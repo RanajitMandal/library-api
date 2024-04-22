@@ -1,4 +1,3 @@
-import { date } from "joi";
 import mongoose from "mongoose";
 
 
@@ -20,7 +19,7 @@ const UserSchema = new mongoose.Schema({
         type: String,
         required: false
     },
-    "date": {
+    "dob": {
         type: Date,
         required: true
     },

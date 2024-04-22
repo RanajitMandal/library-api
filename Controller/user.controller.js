@@ -22,8 +22,8 @@ const userFilter = async (req, res) => {
     if (query.phone) {
         filter.phone = query.phone
     }
-    if (query.date) {
-        filter.date = query.date
+    if (query.dob) {
+        filter.dob = query.dob
     }
 
    
@@ -64,14 +64,14 @@ const userById = async (req, res) => {
 
     res.send(allEmp)
 }
-const employeeAdd = async (req, res) => {
+const userAdd= async (req, res) => {
     // console.log(req.body);
     const requestdata = {
         "firstName": req.body.firstName,
         "lastName": req.body.lastName,
         "email": req.body.email,
         "phone": req.body.phone,
-        "date": req.body.date,
+        "dob": req.body.dob,
         
     }
     const newEmp = new UserModel(requestdata);
@@ -92,7 +92,7 @@ const userUpdate = async (req, res) => {
     if (req.body.lastName) { requestdata["lastName"] = req.body.lastName }
     if (req.body.email) { requestdata["email"] = req.body.email }
     if (req.body.phone) { requestdata["phone"] = req.body.phone }
-    if (req.body.date) { requestdata["date"] = req.body.date }
+    if (req.body.dob) { requestdata["dob"] = req.body.dob }
   
 
 
