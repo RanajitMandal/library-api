@@ -1,18 +1,19 @@
 import Joi from 'joi';
 
 
-const employeeFilter = () => {
+const userFilter = () => {
 
 }
-const fiendEmployeeById = () => {
+const fiendUserById = () => {
 
 }
-const addEmployee = (req, res, next) => {
+const addUser = (req, res, next) => {
   const schema = Joi.object({
-    empName: Joi.string().required(),
+    firstName: Joi.string().required(),
+    lastName: Joi.string().required(),
     email: Joi.string().required(),
     phone: Joi.string().optional(),
-    city: Joi.string().required(),
+    dob: Joi.date().required(),
   
   })
   try {
@@ -28,15 +29,13 @@ const addEmployee = (req, res, next) => {
   }
 
 }
-const updateEmployee = (req,res,next) => {
+const updateUser = (req,res,next) => {
   const schema = Joi.object({
-    empName: Joi.string().optional(),
-    email: Joi.string().optional(),
+    firstName: Joi.string().required(),
+    lastName: Joi.string().required(),
+    email: Joi.string().required(),
     phone: Joi.string().optional(),
-    city: Joi.string().optional(),
-    ps: Joi.string().optional(),
-    salary: Joi.number().optional(),
-    dept: Joi.string().optional(),
+    dob: Joi.date().required(),
   })
   try{
     const validationData = schema.validate(req.body);
@@ -56,9 +55,10 @@ const updateEmployee = (req,res,next) => {
   
 
 
-const deleteEmployee = () => {
+const deleteuser = () => {
 
 }
 export default {
-  addEmployee, updateEmployee, deleteEmployee,employeeFilter,fiendEmployeeById
+  addUser,
+  deleteuser, updateUser, deleteuser,userFilter,fiendUserById
 }

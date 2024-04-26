@@ -1,13 +1,15 @@
 import express, { query } from 'express'
 import mongoose from 'mongoose';
-import employeeRouter from './routers/userrouter.js';
+// import employeeRouter from './routers/userrouter.js';
 import departmentRouter from './routers/departmentrouter.js';
 import url from 'url'; 
+import userRouter from './routers/userrouter.js';
+import cors from 'cors';
 
 
 const app = express()
 const port = 3000
-
+app.use(cors())
 app.use(express.json());
 
 app.get('/', (req, res) => {
